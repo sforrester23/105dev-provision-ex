@@ -119,7 +119,7 @@
 
         sudo apt install nginx
 
-- why not install node.js too!
+- why not get it to install node.js too!
 
         curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
         sudo apt-get install -y nodejs
