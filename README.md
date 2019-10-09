@@ -8,7 +8,8 @@
 - Initiate a git repository/directory with .gitignore, readme
 - .gitignore should contain: .vagrant/, star.log
 - in bash window, execute:
-    vagrant init ubuntu/xenial64
+
+        vagrant init ubuntu/xenial64
 
 - which initiates the vagrant and uses the OS ubuntu
 - you can go into the vagrant file and edit it (remove comments maybe)
