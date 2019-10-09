@@ -8,7 +8,6 @@
 - Initiate a git repository/directory with .gitignore, readme
 - .gitignore should contain: .vagrant/, star.log
 - in bash window, execute:
-
     vagrant init ubuntu/xenial64
 
 - which initiates the vagrant and uses the OS ubuntu
@@ -41,7 +40,6 @@
 - next, we need to install the hostsupdater plugin, so we can alias our local ip address with a name of our choice.
 
 - make sure you're outside of the vagrant ssh command line, and execute:
-
     vagrant plugin install vagrant-hostsupdater
 
 - in our vagrant file, below the config.vm.network line we just created, we can add:
