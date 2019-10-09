@@ -27,7 +27,7 @@
         sudo apt-get update -y
         sudo apt install nginx
 
-- the "-y" is there to say yes to the prompts
+- the "-y" is there to say yes to the prompts, say yes to any when prompted!
 - now, to leave the ssh execute:
 
         logout
@@ -35,6 +35,10 @@
 - we can now edit our vagrant file by entering, below the config.vm.box = "ubuntu/xenial64" line:
 
         config.vm.network "private network", ip: "192.168.10.100"
+
+- now, reload vagrant to update what we've changed:
+
+        reload vagrant
 
 - this sets up a private local network at ip address 192.168.10.100
 - you can test if this has worked by visiting 192.168.10.100 on your browser
@@ -47,5 +51,9 @@
 - in our vagrant file, below the config.vm.network line we just created, we can add:
 
         config.hostsupdater.aliases = ["your_name"]
+
+- now, reload vagrant to update what we've changed:
+
+        reload vagrant
 
 - you can call it whatever you want in the "your_name" part!
