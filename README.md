@@ -123,3 +123,13 @@
 
         curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
         sudo apt-get install -y nodejs
+
+- we need to think about the order in which our code is executed in vagrant file.
+- you're probably better off installing nginx before you work out your private network! 
+- let's move our bash scripting command to just after the vagrant init part, so it shows:
+
+        config.vm.box = "ubuntu/xenial64"
+        # provisioning for bash script
+        config.vm.provision "shell", path: "environment/provision.sh"
+        config.vm.network "private_network", ip: "192.168.10.100"
+        config.hostsupdater.aliases = ["eng42.local"]
